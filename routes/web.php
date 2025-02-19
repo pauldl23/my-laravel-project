@@ -39,8 +39,13 @@ Route::get('/user/{name?}', function ($name = null) {
     }
 });
 
-// POST Request 
+// POST Request     
 Route::post('/submit-form', [UserController::class, 'submitForm']);
 
 // PUT Request
 Route::put('/update-user/{id}', [UserController::class, 'userUpdate']);
+
+
+Route::get('/aboutme', function () {
+    return view('aboutme');
+});
